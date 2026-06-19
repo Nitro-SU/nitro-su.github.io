@@ -65,3 +65,136 @@ p:first-of-type {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
 }
+/* ============================
+   TELEGRAM MODAL COMPONENT 
+   ============================*/
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 13, 29, 0.9);
+    z-index: 1000;
+    display: flex; /* Always flex layout, opacity handles visibility now */
+    justify-content: center;
+    align-items: center;
+    
+    /* Fade Engine */
+    opacity: 0;
+    pointer-events: none; /* Prevents clicking invisible elements */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* This class gets added by JS to trigger the fade-in */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: #110D1D;
+    border: 2px solid #0085DD; 
+    padding: 30px;
+    border-radius: 4px;
+    max-width: 400px;
+    width: 85%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px #0085DD44;
+    
+    /* Subtle slide up animation when fading in */
+    transform: translateY(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-content:hover {
+    border-color: #19DE12;
+    box-shadow: 0 0 20px rgba(25, 222, 18, 0.3);
+    transition: 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 2rem; /* Increased size for the close button */
+    color: #0085DD;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #19DE12;
+}
+
+.modal-content h3 {
+    font-size: 1.8rem; /* Made header match your page's h1 look */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-subtitle {
+    font-size: 1.1rem; /* Brough up to match standard text sizes */
+    color: #0085DD;
+    margin-bottom: 25px;
+}
+
+.qr-code {
+    width: 220px; /* Made the QR layout slightly bigger to balance the fonts */
+    height: 220px;
+    margin: 0 auto 25px auto;
+    border: 2px solid #19DE12; 
+    padding: 5px;
+    background: #ffffff; 
+    border-radius: 4px;
+    display: block;
+}
+
+.modal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Main Profile Button */
+.modal-btn {
+    display: block;
+    background: #110D1D;
+    color: #0085DD;
+    border: 2px solid #0085DD;
+    padding: 16px 30px; /* Padding matches your .btn-link class exactly */
+    font-size: 1.1rem;   /* Text size matches your main page menu */
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal-btn:hover {
+    background: #19DE12;
+    color: #110D1D;
+    border-color: #19DE12;
+    box-shadow: 0 0 15px #19DE12;
+}
+
+/* Secondary Channel Button */
+.modal-btn.secondary {
+    color: #19DE12;
+    border-color: #19DE12;
+}
+
+.modal-btn.secondary:hover {
+    background: #0085DD;
+    color: #110D1D;
+    border-color: #0085DD;
+    box-shadow: 0 0 15px #0085DD;
+}

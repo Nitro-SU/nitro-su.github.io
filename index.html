@@ -14,21 +14,70 @@
     <p style="color: #0085DD;" class="blink-smooth">> SELECT_DESTINATION |</p>
 
     <div style="width: 100%;">
-        <a href="https://bsky.app/profile/levelupog.bsky.social" class="btn-link">Bluesky</a>
-        <a href="https://x.com/Nitro_SU" class="btn-link">Twitter</a>
-        <a href="https://www.furtrack.com/user/Nitro_SU/photography" class="btn-link">Furtrack</a>
-        <a href="https://t.me/+lRHY4h6STMg3ZjU0" class="btn-link">Telegram</a>
-        <a href="https://www.tiktok.com/@nitro_su" class="btn-link">Tiktok</a>
-        <a href="https://www.instagram.com/nitro.su/?hl=en" class="btn-link">Instagram</a>
-        <a href="https://www.twitch.tv/nitro_su" class="btn-link">Twitch.TV</a>
-        <a href="https://www.youtube.com/channel/UC7aztOMHy0ad-gZ7EPD3JUw" class="btn-link">YouTube</a>
-        <a href="https://github.com/Nitro-SU" class="btn-link">GitHub</a>
+        <a href="#" class="btn-link modal-trigger" data-target="tg-modal">Telegram Hub</a>
+        <a href="#" class="btn-link modal-trigger" data-target="visual-modal">Visual Media</a>
+        <a href="#" class="btn-link modal-trigger" data-target="video-modal">Videos & Streams</a>
+        <a href="#" class="btn-link modal-trigger" data-target="blogs-modal">Micro Blogs</a>
+        
+        <a href="https://github.com/Nitro-SU" target="_blank" class="btn-link" style="margin-top: 15px; border-color: #19DE12; color: #19DE12;">GitHub</a>
+    </div>
+
+    <div class="modal-overlay" id="tg-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Telegram Hub</h3>
+            <p class="modal-subtitle">> SCAN_QR_CODE or SELECT_NODE |</p>
+            <img src="TelegramQR.png" alt="Telegram QR Code" class="qr-code">
+            <div class="modal-links">
+                <a href="https://t.me/Nitro_SU" target="_blank" class="modal-btn">DM / Profile Link</a>
+                <a href="https://t.me/+lRHY4h6STMg3ZjU0" target="_blank" class="modal-btn secondary">My Random Stuff Channel</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="visual-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Visual Media</h3>
+            <p class="modal-subtitle">> SHORT_FORM_FEED & GALLERY |</p>
+            <div class="modal-links">
+                <a href="https://www.instagram.com/nitro.su/?hl=en" target="_blank" class="modal-btn">Instagram</a>
+                <a href="https://www.tiktok.com/@nitro_su" target="_blank" class="modal-btn secondary">TikTok</a>
+                <a href="https://www.furtrack.com/user/Nitro_SU/photography" target="_blank" class="modal-btn">Furtrack Photography</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="video-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Videos & Streams</h3>
+            <p class="modal-subtitle">> BROADCAST_CHANNELS |</p>
+            <div class="modal-links">
+                <a href="https://www.youtube.com/channel/UC7aztOMHy0ad-gZ7EPD3JUw" target="_blank" class="modal-btn secondary">YouTube</a>
+                <a href="https://www.twitch.tv/nitro_su" target="_blank" class="modal-btn">Twitch.TV</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="blogs-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Micro Blogs</h3>
+            <p class="modal-subtitle">> TEXT_BASED_LOGS |</p>
+            <div class="modal-links">
+                <a href="https://bsky.app/profile/levelupog.bsky.social" target="_blank" class="modal-btn">Bluesky</a>
+                <a href="https://x.com/Nitro_SU" target="_blank" class="modal-btn secondary">Twitter</a>
+            </div>
+        </div>
     </div>
 
     <div class="stats">
         <p>PROTOCOL: HTTPS // STATUS: SECURE</p>
         <p>© 2026 Nitro_SU</p>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
