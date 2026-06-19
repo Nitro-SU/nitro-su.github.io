@@ -164,14 +164,14 @@ p:first-of-type {
     gap: 12px;
 }
 
-/* Main Profile Button */
+/* Main Profile Button (Neon Green) */
 .modal-btn {
     display: block;
     background: #110D1D;
-    color: #0085DD;
-    border: 2px solid #0085DD;
-    padding: 16px 30px; /* Padding matches your .btn-link class exactly */
-    font-size: 1.1rem;   /* Text size matches your main page menu */
+    color: #19DE12; 
+    border: 2px solid #19DE12; 
+    padding: 16px 30px; 
+    font-size: 1.1rem;   
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 4px;
@@ -180,21 +180,21 @@ p:first-of-type {
 }
 
 .modal-btn:hover {
-    background: #19DE12;
+    background: #0085DD; 
     color: #110D1D;
-    border-color: #19DE12;
-    box-shadow: 0 0 15px #19DE12;
+    border-color: #0085DD; 
+    box-shadow: 0 0 15px #0085DD; 
 }
 
-/* Secondary Channel Button */
+/* Secondary Channel Button (Cyber Blue) */
 .modal-btn.secondary {
-    color: #19DE12;
-    border-color: #19DE12;
+    color: #0085DD; 
+    border-color: #0085DD; 
 }
 
 .modal-btn.secondary:hover {
-    background: #0085DD;
+    background: #19DE12; 
     color: #110D1D;
-    border-color: #0085DD;
-    box-shadow: 0 0 15px #0085DD;
+    border-color: #19DE12; 
+    box-shadow: 0 0 15px #19DE12;
 }
