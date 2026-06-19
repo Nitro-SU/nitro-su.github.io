@@ -83,16 +83,16 @@
         </div>
     </div>
 
-    <!-- 05: UPCOMING EVENTS MODAL (static text) -->
+    <!-- 05: UPCOMING EVENTS MODAL -->
     <div class="modal-overlay" id="events-modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h3>Upcoming Events</h3>
             <p class="modal-subtitle blink-smooth">> EVENT_ROSTER_LOCATED |</p>
-            <div class="modal-links">
-                                <div class="modal-btn secondary" style="pointer-events: none;">SussexFurs BBQ - TBC July 2026</div>
-                                <div class="modal-btn" style="pointer-events: none;">LFM Summer Party - July 2026</div>
-            </div>
+            
+            <!-- JavaScript will automatically inject the events inside this container -->
+            <div class="modal-links" id="events-list"></div>
+            
         </div>
     </div>
 
