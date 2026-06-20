@@ -194,3 +194,15 @@ p:first-of-type {
     border-color: #19DE12; 
     box-shadow: 0 0 15px #19DE12;
 }
+
+.btn-github {
+    border-color: #0085DD !important;
+    color: #0085DD !important;
+    margin-top: 15px;
+}
+
+.btn-github:hover {
+    background: #0085DD !important;
+    color: #110D1D !important;
+    box-shadow: 0 0 15px #0085DD !important;
+}
