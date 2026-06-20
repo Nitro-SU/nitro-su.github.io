@@ -26,30 +26,26 @@ p:first-of-type {
     margin-bottom: 8px;
 }
 
+/* Main Directory Buttons */
 .btn-link {
     display: block;
     background: #110D1D;
-    color: #0085DD;
-    border: 2px solid #0085DD;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    margin: 15px auto;
-    border-radius: 4px;
+    color: #19DE12;
+    border: 2px solid #19DE12;
+    padding: 15px;
+    margin-bottom: 15px;
     text-decoration: none;
     text-transform: uppercase;
-    width: 85%;
-    max-width: 300px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #0085DD44;
+    border-radius: 4px;
     font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 .btn-link:hover {
     background: #19DE12;
     color: #110D1D;
-    border-color: #19DE12;
-    box-shadow: 0 0 20px #19DE12;
-    transform: scale(1.03);
+    box-shadow: 0 0 15px #19DE12;
 }
 
 .stats {
@@ -66,7 +62,7 @@ p:first-of-type {
     50% { opacity: 0.3; }
 }
 /* ============================
-   TELEGRAM MODAL COMPONENT 
+        MODAL COMPONENTS
    ============================*/
 
 .modal-overlay {
@@ -81,13 +77,13 @@ p:first-of-type {
     justify-content: center;
     align-items: center;
     
-    /* Fade Engine */
+    /* Fade  */
     opacity: 0;
     pointer-events: none; /* Prevents clicking invisible elements */
     transition: opacity 0.3s ease-in-out;
 }
 
-/* This class gets added by JS to trigger the fade-in */
+/* JS to trigger the fade-in */
 .modal-overlay.active {
     opacity: 1;
     pointer-events: auto;
@@ -123,7 +119,7 @@ p:first-of-type {
     position: absolute;
     top: 8px;
     right: 15px;
-    font-size: 2rem; /* Increased size for the close button */
+    font-size: 2rem;
     color: #0085DD;
     cursor: pointer;
     transition: 0.3s;
@@ -135,20 +131,20 @@ p:first-of-type {
 }
 
 .modal-content h3 {
-    font-size: 1.8rem; /* Made header match your page's h1 look */
+    font-size: 1.8rem;
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .modal-subtitle {
-    font-size: 1.1rem; /* Brough up to match standard text sizes */
+    font-size: 1.1rem;
     color: #0085DD;
     margin-bottom: 25px;
 }
 
 .qr-code {
-    width: 220px; /* Made the QR layout slightly bigger to balance the fonts */
+    width: 220px;
     height: 220px;
     margin: 0 auto 25px auto;
     border: 2px solid #19DE12; 
