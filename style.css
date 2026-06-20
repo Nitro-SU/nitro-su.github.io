@@ -106,13 +106,14 @@ p:first-of-type {
     /* Subtle slide up animation when fading in */
     transform: translateY(10px);
     transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, border-color 0.3s, box-shadow 0.3s;
 }
 
 .modal-overlay.active .modal-content {
     transform: translateY(0);
 }
 
-.modal-content:hover {
+.modal-content.hover-enabled:hover {
     border-color: #19DE12;
     box-shadow: 0 0 20px rgba(25, 222, 18, 0.3);
     transition: 0.3s;

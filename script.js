@@ -4,7 +4,7 @@
 // List of events I'm attending, with the option to style them as "primary" or "secondary" for color coding.
 
 const upcomingEvents = [
-    { name: "SusseFurs BBQ - TBC July 2026", style: "secondary" },
+    { name: "SussexFurs BBQ - TBC July 2026", style: "secondary" },
     { name: "LFM Summer Party - July 2026", style: "primary" },
 ];
 
@@ -24,6 +24,10 @@ triggers.forEach(trigger => {
         
         if (targetModal) {
             targetModal.classList.add('active');
+
+            setTimeout(() => {
+                targetModal.querySelector('.modal-content').classList.add('hover-enabled');
+            }, 300);
         }
     });
 });
@@ -31,7 +35,9 @@ triggers.forEach(trigger => {
 // 2. Close modal via 'X'
 closeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        btn.closest('.modal-overlay').classList.remove('active');
+        const modal = btn.closest('.modal-overlay');
+        modal.classList.remove('active');
+        modal.querySelector('.modal-content').classList.remove('hover-enabled');
     });
 });
 
