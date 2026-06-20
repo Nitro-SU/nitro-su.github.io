@@ -27,6 +27,7 @@ p:first-of-type {
 }
 
 /* Main Directory Buttons */
+/* Main Directory Buttons */
 .btn-link {
     display: block;
     background: #110D1D;
@@ -38,8 +39,10 @@ p:first-of-type {
     text-transform: uppercase;
     border-radius: 4px;
     font-weight: bold;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     transition: 0.3s;
+    font-family: inherit; 
 }
 
 .btn-link:hover {
@@ -172,7 +175,9 @@ p:first-of-type {
     text-transform: uppercase;
     border-radius: 4px;
     font-weight: bold;
+    letter-spacing: 1px;
     transition: 0.3s;
+    font-family: inherit;
 }
 
 .modal-btn:hover {
