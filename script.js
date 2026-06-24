@@ -52,7 +52,7 @@ window.addEventListener('click', (e) => {
 // ==========================================
 // EVENT LIST INJECTOR
 // ==========================================
-// This script reads your list at the top and builds the HTML automatically.
+// This script reads the list at the top and builds the HTML automatically.
 
 const eventsContainer = document.getElementById('events-list');
 
@@ -67,7 +67,7 @@ if (eventsContainer) {
             eventBlock.classList.add('secondary');
         }
         
-        // Lock out the hover/click effects so it acts purely as text
+        // Lock out the hover/click effects so it acts purely as text for the event list
         eventBlock.style.pointerEvents = 'none';
         
         // Add the event text
