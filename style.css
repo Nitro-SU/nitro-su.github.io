@@ -212,3 +212,11 @@ p:first-of-type {
     color: #110D1D !important;
     box-shadow: 0 0 15px #0085DD !important;
 }
+/* QR Code sizing */
+.qr-code {
+    width: 50%;
+    aspect-ratio: 1 / 1; 
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
