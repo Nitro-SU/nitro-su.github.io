@@ -4,8 +4,8 @@
 // List of events I'm attending, with the option to style them as "primary" or "secondary" for color coding.
 
 const upcomingEvents = [
-    { name: "SussexFurs BBQ - July 2026", style: "primary" },
     { name: "LFM Summer Party - July 2026", style: "primary" },
+    { name: "Go Japan! - August 2026", style: "primary"}
 ];
 
 
@@ -32,7 +32,7 @@ triggers.forEach(trigger => {
     });
 });
 
-// 2. Close modal via 'X'
+// 2. Close modal via 'X' up
 closeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const modal = btn.closest('.modal-overlay');
