@@ -4,8 +4,35 @@
 // List of events I'm attending, with the option to style them as "primary" or "secondary" for color coding.
 
 const upcomingEvents = [
-    { name: "Go Japan! - August 2026", style: "primary"}
+    { name: "Go Japan!", date: "2026-08-31", style: "primary" },
+    { name: "LondonFurs", date: "2026-08-08", style: "secondary" }
 ];
+
+function getEventMonthLabel(event) {
+    const parsedDate = new Date(event.date);
+
+    if (!Number.isNaN(parsedDate.getTime())) {
+        return parsedDate.toLocaleString('en-US', { month: 'long' });
+    }
+
+    return event.name || 'Upcoming Event';
+}
+
+function isEventUpcoming(event) {
+    if (!event.date) {
+        return true;
+    }
+
+    const parsedDate = new Date(event.date);
+    if (Number.isNaN(parsedDate.getTime())) {
+        return true;
+    }
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    return parsedDate >= today;
+}
 
 
 // ==========================================
@@ -56,23 +83,25 @@ window.addEventListener('click', (e) => {
 const eventsContainer = document.getElementById('events-list');
 
 if (eventsContainer) {
-    upcomingEvents.forEach(event => {
-        // Create the block
-        const eventBlock = document.createElement('div');
-        
-        // Add the base class, and the secondary class if requested
-        eventBlock.className = 'modal-btn';
-        if (event.style === "secondary") {
-            eventBlock.classList.add('secondary');
-        }
-        
-        // Lock out the hover/click effects so it acts purely as text for the event list
-        eventBlock.style.pointerEvents = 'none';
-        
-        // Add the event text
-        eventBlock.textContent = event.name;
-        
-        // Inject it into the page
-        eventsContainer.appendChild(eventBlock);
-    });
+    upcomingEvents
+        .filter(isEventUpcoming)
+        .forEach(event => {
+            // Create the block
+            const eventBlock = document.createElement('div');
+            
+            // Add the base class, and the secondary class if requested
+            eventBlock.className = 'modal-btn';
+            if (event.style === "secondary") {
+                eventBlock.classList.add('secondary');
+            }
+            
+            // Lock out the hover/click effects so it acts purely as text for the event list
+            eventBlock.style.pointerEvents = 'none';
+            
+            // Add the event text
+            eventBlock.textContent = getEventMonthLabel(event);
+            
+            // Inject it into the page
+            eventsContainer.appendChild(eventBlock);
+        });
 }
