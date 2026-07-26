@@ -4,7 +4,7 @@
 // List of events I'm attending, with the option to style them as "primary" or "secondary" for color coding.
 
 const upcomingEvents = [
-    { name: "Furry BBQ", date: "2026-08-01", style: "primary" },
+    { name: "Furry BBQ", date: "2026-08-01", style: "secondary" },
     { name: "Go Japan!", date: "2026-08-31", style: "primary" },
     { name: "LondonFurs", date: "2026-08-08", style: "secondary" },
     { name: "ScotiaCon", date: "2027-02-05", style: "primary" },
