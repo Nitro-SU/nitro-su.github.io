@@ -83,9 +83,16 @@ window.addEventListener('click', (e) => {
 const eventsContainer = document.getElementById('events-list');
 
 if (eventsContainer) {
-    upcomingEvents
-        .filter(isEventUpcoming)
-        .forEach(event => {
+    const upcomingEventList = upcomingEvents.filter(isEventUpcoming);
+
+    if (upcomingEventList.length === 0) {
+        const emptyState = document.createElement('div');
+        emptyState.className = 'modal-btn';
+        emptyState.style.pointerEvents = 'none';
+        emptyState.textContent = 'No planned events';
+        eventsContainer.appendChild(emptyState);
+    } else {
+        upcomingEventList.forEach(event => {
             // Create the block
             const eventBlock = document.createElement('div');
             
@@ -104,4 +111,5 @@ if (eventsContainer) {
             // Inject it into the page
             eventsContainer.appendChild(eventBlock);
         });
+    }
 }
