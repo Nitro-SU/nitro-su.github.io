@@ -8,11 +8,12 @@ const upcomingEvents = [
     { name: "LondonFurs", date: "2026-08-08", style: "secondary" }
 ];
 
-function getEventMonthLabel(event) {
+function getEventLabel(event) {
     const parsedDate = new Date(event.date);
 
     if (!Number.isNaN(parsedDate.getTime())) {
-        return parsedDate.toLocaleString('en-US', { month: 'long' });
+        const month = parsedDate.toLocaleString('en-US', { month: 'long' });
+        return `${event.name || 'Upcoming Event'} — ${month}`;
     }
 
     return event.name || 'Upcoming Event';
@@ -106,7 +107,7 @@ if (eventsContainer) {
             eventBlock.style.pointerEvents = 'none';
             
             // Add the event text
-            eventBlock.textContent = getEventMonthLabel(event);
+            eventBlock.textContent = getEventLabel(event);
             
             // Inject it into the page
             eventsContainer.appendChild(eventBlock);
