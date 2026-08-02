@@ -26,8 +26,6 @@ p:first-of-type {
     margin-bottom: 8px;
 }
 
-/* Main Directory Buttons */
-/* Main Directory Buttons */
 .btn-link {
     display: block;
     background: #110D1D;
@@ -64,9 +62,6 @@ p:first-of-type {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
 }
-/* ============================
-        MODAL COMPONENTS
-   ============================*/
 
 .modal-overlay {
     position: fixed;
@@ -82,7 +77,7 @@ p:first-of-type {
     
     /* Fade  */
     opacity: 0;
-    pointer-events: none; /* Prevents clicking invisible elements */
+    pointer-events: none; 
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -165,7 +160,6 @@ p:first-of-type {
     gap: 12px;
 }
 
-/* Main Profile Button (Neon Green) */
 .modal-btn {
     display: block;
     background: #110D1D;
@@ -189,7 +183,6 @@ p:first-of-type {
     box-shadow: 0 0 15px #0085DD; 
 }
 
-/* Secondary Channel Button (Cyber Blue) */
 .modal-btn.secondary {
     color: #0085DD; 
     border-color: #0085DD; 
@@ -214,3 +207,51 @@ p:first-of-type {
     box-shadow: 0 0 15px #0085DD !important;
 }
 
+.modal-btn {
+    display: block;
+    background: #110D1D;
+    color: #19DE12; 
+    border: 2px solid #19DE12; 
+    padding: 16px 30px; 
+    font-size: 1.1rem;   
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.modal-btn:hover {
+    background: #0085DD; 
+    color: #110D1D;
+    border-color: #0085DD; 
+    box-shadow: 0 0 15px #0085DD; 
+}
+
+.modal-btn.secondary,
+.modal-btn.tentative {
+    color: #0085DD; 
+    border-color: #0085DD; 
+}
+
+.modal-btn.secondary:hover,
+.modal-btn.tentative:hover {
+    background: #19DE12; 
+    color: #110D1D;
+    border-color: #19DE12; 
+    box-shadow: 0 0 15px #19DE12;
+}
+
+.modal-btn.maybe {
+    color: #FFD700;
+    border-color: #FFD700;
+}
+
+.modal-btn.maybe:hover {
+    background: #FFD700;
+    color: #110D1D;
+    border-color: #FFD700;
+    box-shadow: 0 0 15px #FFD700;
+}

@@ -1,13 +1,12 @@
 // ==========================================
 // UPCOMING EVENTS
 // ==========================================
-// List of events I'm attending, with the option to style them as "primary" or "secondary" for color coding.
+// Styles: "going" (Green), "tentative" (Blue), "maybe" (Gold/Last Minute)
 
 const upcomingEvents = [
-    { name: "Furry BBQ", date: "2026-08-01", style: "secondary" },
-    { name: "Go Japan!", date: "2026-08-31", style: "primary" },
-    { name: "LondonFurs", date: "2026-08-08", style: "secondary" },
-    { name: "ScotiaCon", date: "2027-02-05", style: "primary" },
+    { name: "Go Japan!", date: "2026-08-31", style: "going" },
+    { name: "LondonFurs", date: "2026-08-08", style: "maybe" },
+    { name: "ScotiaCon", date: "2027-02-05", style: "going" },
 ];
 
 function getEventLabel(event) {
@@ -96,13 +95,12 @@ if (eventsContainer) {
         eventsContainer.appendChild(emptyState);
     } else {
         upcomingEventList.forEach(event => {
-            // Create the block
             const eventBlock = document.createElement('div');
             
-            // Add the base class, and the secondary class if requested
+            // Add the base class, and apply the "going", "tentative", or "maybe" class dynamically
             eventBlock.className = 'modal-btn';
-            if (event.style === "secondary") {
-                eventBlock.classList.add('secondary');
+            if (event.style) {
+                eventBlock.classList.add(event.style);
             }
             
             // Lock out the hover/click effects so it acts purely as text for the event list
